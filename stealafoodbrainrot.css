@@ -1,0 +1,54 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frontpage{
+ margin: 0;
+    padding: 0;
+    line-height: 2;
+    min-height: 100vh;
+    background-image: url(milestone_4_and_kid_coolkid.png);
+background-size: contain;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin: 100px;
+    border-radius: 666777px;
+    color: #230303;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 10px solid #cd2222;
+   
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}

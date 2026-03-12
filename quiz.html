@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food Brainrot Quiz</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background: #f3f4f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background-image: url(ohiobackground.jpg);
+
+}
+
+.quiz-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    width:400px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1{
+    margin-bottom:10px;
+}
+
+.question{
+    font-size:22px;
+    margin:20px 0;
+}
+
+input{
+    padding:10px;
+    font-size:16px;
+    width:150px;
+    text-align:center;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    font-size:16px;
+    border:none;
+    border-radius:10px;
+    background:#4CAF50;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#43a047;
+}
+
+.result{
+    margin-top:20px;
+    font-size:18px;
+}
+
+.back{
+    margin-top:20px;
+    display:block;
+    text-decoration:none;
+    color:#555;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="quiz-box">
+
+<h1>Brainrot Food Quiz</h1>
+
+<div class="question" id="question">
+Loading question...
+</div>
+
+<input type="number" id="answer" placeholder="Your answer">
+
+<br>
+
+<button onclick="checkAnswer()">Submit</button>
+
+<div class="result" id="result"></div>
+
+<a href="ohio.html" class="back">⬅ Back to Brainrot Foods</a>
+<p>If u dont do dis then ill give u a job appplication so u can do something</p>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const food = params.get("food");
+
+let correctAnswer;
+let foodName;
+
+if(food === "A"){
+    document.getElementById("question").innerText = "2 × 4 = ?";
+    correctAnswer = 8;
+    foodName = "Chocoladoro";
+}
+
+else if(food === "B"){
+    document.getElementById("question").innerText = "12 × 12 − 67 = ?";
+    correctAnswer = 77;
+    foodName = "Burguro & Fryo";
+}
+
+else if(food === "C"){
+    document.getElementById("question").innerText = "2 × 4 + 6 × 7 − 9 = ?";
+    correctAnswer = 41;
+    foodName = "La berry combination";
+}
+
+function checkAnswer(){
+
+let answer = document.getElementById("answer").value;
+
+if(answer == correctAnswer){
+document.getElementById("result").innerText =
+"🎉 You've collected the " + foodName;
+}
+else{
+document.getElementById("result").innerText =
+"😢 Incorrect!";
+}
+
+}
+
+</script>
+
+</body>
+</html>

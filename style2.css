@@ -1,0 +1,49 @@
+/* Centering the placards on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+  font-family: sans-serif;
+  background-image: url(ohiobackground.jpg);
+}
+
+.placard-container {
+  display: flex;
+  gap: 30px; /* Space between the cards */
+}
+
+.placard {
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+  /* The transition makes the hover smooth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.placard img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+/* The Hover Effect */
+.placard:hover {
+  /* Lift the card up and make it slightly larger */
+  transform: translateY(-10px) scale(1.05);
+  /* Deepen the shadow to make it look further from the background */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
